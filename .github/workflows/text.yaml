@@ -1,13 +1,11 @@
+---
 jobs:
   test:
     runs-on: self-hosted
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Say Hello from macOS runner
         shell: bash
         run: |
-          echo "✅ Hello from your macOS self-hosted runner! Success by GreatBalu!"
-
+          echo "✅ Hello from your macOS self-hosted runner! Success by JPB!"
