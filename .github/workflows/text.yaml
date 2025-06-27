@@ -1,11 +1,30 @@
----
+name: Self-Hosted macOS Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
-  test:
-    runs-on: self-hosted
+  test-macos:
+    name: Run test on self-hosted macOS
+    runs-on: [self-hosted, macOS]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Say Hello from macOS runner
-        shell: bash
-        run:
-          echo "✅ Hello from your macOS self-hosted runner! Success by JPB!"
+
+      - name: Print system info
+        run: |
+          echo "Running on:"
+          uname -a
+          sw_vers
+
+      - name: Run a shell test
+        run: |
+          echo "Testing basic shell command"
+          mkdir -p test_dir
+          cd test_dir
+          echo "hello from self-hosted runner" > testfile.txt
+          cat testfile.txt
