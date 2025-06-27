@@ -9,5 +9,5 @@ jobs:
       - name: Say Hello from macOS runner
         shell: bash
         run: |
-          echo "✅ Hello from your macOS self-hosted runner! Success!"
+          echo "✅ Hello from your macOS self-hosted runner! Success by GreatBalu!"
 
