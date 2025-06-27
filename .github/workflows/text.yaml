@@ -7,5 +7,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Say Hello from macOS runner
         shell: bash
-        run: |
+        run:
           echo "✅ Hello from your macOS self-hosted runner! Success by JPB!"
